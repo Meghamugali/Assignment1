@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     boolean check = false;
     private Button btnzero;
 
-
+int[] colors = new int[]{Color.MAGENTA,Color.BLUE,Color.GREEN,Color.YELLOW,Color.RED};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
         mCount++;
         if (mShowCount != null) {
             mShowCount.setText(Integer.toString(mCount));
+
+                btnzero.setBackgroundColor(colors[mCount]);
+
         }
     }
 
     public void onClick(View arg0) {
         check = true;
-        btnzero.setBackgroundColor(Color.BLUE);
 
         if (check == true) {
 
